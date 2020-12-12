@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap');
+body {
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0;
+}
+
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+}
+ol,
+ul, 
+li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+figure {
+  margin: 0;
+}
+.container {
+  /* border: 1px solid red; */
+  /*width: 1000px;*/
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+  max-width: 1000px;
+  flex:1;
+}/*Menu mediaquery*/
+.burger-buttom{
+  /*border-radius: 50%;*/
+  padding: 5px;
+  background-color: rgba(24, 77, 71, .8);
+  display: none;
+  line-height: 30px;
+  position: fixed;
+  z-index: 4;
+  color: white;
+}
+/*Seccion del header*/
+
+.header{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  background-color: #38312f;
+}
+.img-container{
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.foto{
+  background-image: url('perfil3.jpg');
+  background-size: cover;
+  width: 85%;
+  height: 85%;
+  box-shadow: 0 0 8px 8px #38312f inset;
+}
+.overlay{
+  background: rgba(0, 0, 0, .4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.nav-container{
+  display: grid;
+}
+.nav-container p{
+  letter-spacing: 2px;
+  margin: 10px;
+  color: white;
+  font-size: 20px;
+}
+.nav-container span{
+  color: #ddc5a2;
+  font-weight: bold;
+}
+.nav-container a{
+  color: white;
+  letter-spacing: 2px;
+}
+.menu-container{
+  display: flex;
+  align-items: center;
+}
+.menu-container ul{
+  display: flex;
+}
+.menu-container li{
+  padding-right: 10px;
+  padding-left: 10px;
+  border-right: 1px solid white;
+  font-size: 25px;
+}
+.menu-container li:last-child{
+  border-right: none;
+}
+.menu-container li:hover{
+  transform: scale(1.06);
+}
+.menu-container a:hover{
+  text-decoration: underline;
+
+}/*Seccion de proyectos*/
+.portfolio h2 {
+  color: #38312f;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+.portfolio {
+  background: #fafafa;
+  padding: 20px;
+}
+.projects-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.project {
+  width: 80%;
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: #d4b28142;
+}
+.project img{
+  width: 90%;
+  height: 300px;
+  border-radius: 10px;
+  margin-top: -35px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.8);
+}
+.project p{
+  letter-spacing: 1px;
+  height: 70px;
+  margin: 15px;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+.projectButton{
+    border: 1px solid #38312f;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 10px;
+    color: #38312f;
+}
+
+/*-----Seccion pide de pagina-------*/
+.footer {
+  color: white;
+  background-color: #eebb4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact-container {
+  background-color: #b38540;
+  color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact{
+  text-align: center;
+}
+.contact h3{
+  margin: 0;
+}
+.contact a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact a:hover, .social a:hover{
+  color: #38312f;
+
+}
+.contact p{
+  margin: 0;
+}
+
+.contact-icon{
+  font-size: 30px;
+  margin-top: 3px;
+}
+.social-link{
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+/*Queri del header.*/
+@media screen and (max-width:1024px){
+  /*hero*/
+}
+@media screen and (max-width:768px){
+  .menu-container li{
+    font-size: 20px;
+  }
+  .project{
+    width: 95%;
+  }
+  .nav-container p{
+    font-size: 15px;
+    text-align: center;
+  }
+  .menu-container{
+    justify-content: center;
+  }
+}
+@media screen and (max-width:520px){
+  .header{
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .foto{
+    width: 300px;
+    height: 300px;
+  }
+  .menu-container{
+    margin: 20px 0;
+    justify-content: center;
+  }
+  .nav-container p{
+    text-align: center;
+  }
+  h1{
+    font-size: 1em;
+  }
+  .contact-container{
+    height: auto;
+    padding: 1em 0;
+    text-align: center;
+    display: block;
+  }
+  .footer{
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+  .projects-container{
+    grid-template-columns: 1fr;
+  }
+  .social-link{
+    font-size: 35px;
+  }
+  .social{
+    margin-top: 5px;
+  }
+  ul.slider{
+    height: 300px;
+  }
+}
